@@ -2,7 +2,7 @@
 #include <string.h>
 #include <fstream>
 using namespace std;
-ifstream fin("vocmax.in");$ git config --global user.email johndoe@example.com
+ifstream fin("vocmax.in");
 ofstream fout("vocmax.out");
 
 int main()
