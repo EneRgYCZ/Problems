@@ -1,21 +1,25 @@
 #include <iostream>
 using namespace std;
 
-int main()
+int FizzBuzz (int numar)
 {
-    int numar = 0;
-    cin >> numar;
+    int Fizz = 0, Buzz = 0;
+    cout<<"Enter Fizz"<<endl;
+    cin>>Fizz;
+    cout<<"Enter Buzz"<<endl;
+    cin>>Buzz;
+    cout<<endl;
     for (int i = 1; i <= numar; i++)
     {
-        if (i % 3 == 0 && i % 5 == 0)
+        if (i % Fizz == 0 && i % Buzz == 0)
         {
             cout << "FizzBuzz" << endl;
         }
-        else if (i % 3 == 0)
+        else if (i % Fizz == 0)
         {
             cout << "Fizz" << endl;
         }
-        else if (i % 5 == 0)
+        else if (i % Buzz == 0)
         {
             cout << "Buzz" << endl;
         }
@@ -24,4 +28,12 @@ int main()
             cout << i << endl;
         }
     }
+    return 0;
+}
+
+int main()
+{
+    int numar;
+    cin >> numar;
+    cout<<FizzBuzz(numar);
 }
