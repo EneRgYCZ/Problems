@@ -1,27 +1,27 @@
 #include <iostream>
 using namespace std;
 
-int main ()
+int main()
 {
-    int numar=0;
-    cin>>numar;
-    for (int i=1;i<=numar;i++)
+    int numar = 0;
+    cin >> numar;
+    for (int i = 1; i <= numar; i++)
     {
-        if (i%3 == 0 && i%5 == 0)
+        if (i % 3 == 0 && i % 5 == 0)
         {
-            cout <<"FizzBuzz"<<endl;
+            cout << "FizzBuzz" << endl;
         }
-        else if (i%3 == 0)
+        else if (i % 3 == 0)
         {
-            cout<<"Fizz"<<endl;
+            cout << "Fizz" << endl;
         }
-        else if (i%5 == 0)
+        else if (i % 5 == 0)
         {
-            cout<<"Buzz"<<endl;
+            cout << "Buzz" << endl;
         }
-        else 
+        else
         {
-            cout<<i<<endl;
+            cout << i << endl;
         }
     }
 }

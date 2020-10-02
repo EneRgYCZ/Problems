@@ -3,15 +3,15 @@
 #include <fstream>
 using namespace std;
 
-int main ()
+int main()
 {
-    ifstream fin ("capslock.in");
-    ofstream fout ("capslock.out");
+    ifstream fin("capslock.in");
+    ofstream fout("capslock.out");
     int upper = 0;
     char s[256];
     fin.getline(s, 256);
-    
-/*  for(int i=0;i<=strlen(s);i++)
+
+    /*  for(int i=0;i<=strlen(s);i++)
     {
         if (s[i] == '#')
         {
@@ -30,5 +30,5 @@ int main ()
             s[i] = tolower(s[i]);
         }
     } */
-    fout<<s;
+    fout << s;
 }
