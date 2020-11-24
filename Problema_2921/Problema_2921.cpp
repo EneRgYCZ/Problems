@@ -1,30 +1,37 @@
 #include <iostream>
-#include <fstream>
 #include <math.h>
 using namespace std;
 
-int main(int argc, char *argv[])
+int main()
 {
-    int n, m, v[10001], i, j, a, b, s, gasit = 0, max = 0;
-    long long suma = 0;
+    int n, m;
     cin >> n;
-    for (i = 1; i <= n; ++i)
+    int v[100001];
+    long long int w[100001], suma = 0;
+    w[0] = 0;
+    for (int i = 1; i <= n; ++i)
     {
         cin >> v[i];
+        w[i] = w[i - 1] + v[i];
     }
+    int x, y, temp;
     cin >> m;
-    for (i = 1; i <= m; ++i)
+    long long int maxx = -99999999999999;
+    for (int i = 1; i <= m; ++i)
     {
-        cin >> a >> b;
-        suma = 0;
-        for (j = a; j <= b; ++j)
+        cin >> x >> y;
+        if (x > y)
         {
-            suma = suma + v[j];
+            temp = x;
+            x = y;
+            y = temp;
         }
-        if (max <= suma)
+        suma = w[y] - w[x - 1];
+        if (suma > maxx)
         {
-            suma = max;
+            maxx = suma;
         }
     }
-    cout << max;
+    cout << maxx;
+    return 0;
 }
